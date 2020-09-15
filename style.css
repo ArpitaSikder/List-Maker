@@ -31,7 +31,7 @@ body {
 .name-pair {
   display: flex;
 }
-
+ 
 #insert {
   width: 350px;
 }
