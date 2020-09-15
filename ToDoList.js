@@ -63,6 +63,33 @@ function sortbydate() {
   }
 }
 
+function edit() {
+  var i;
+  var div = document.getElementById("select"); //get the objects
+  for (i = 0; i < div.childNodes.length; i++) {
+    //the for loop iterates through thr childNodes
+    var classname = div.childNodes[i].className;
+    var values = div.childNodes[i].textContent;
+    if (classname == "ui-selectee ui-selected") {
+      var new_value = prompt("Enter the new value");
+      if (new_value.indexOf("=") != -1) {
+        var new_node = document.createElement("li");
+        var new_nodevalue = document.createTextNode(new_value);
+        new_node.appendChild(new_nodevalue);
+        array[i - 1] = new_value; //collects the items in an array for using it in the sortbytask/sortbydate functions
+        document
+          .getElementById("select")
+          .replaceChild(new_node, div.childNodes[i]);
+      } else {
+        alert(
+          "Please enter text in the format 'task=date' eg. gardening=3rd Sept"
+        ); //alerts user about the wrong formatting if any
+      }
+    }
+    console.log("here");
+  }
+}
+
 function deletelist() {
   //to slect more than one item do Ctrl+select
 
@@ -76,7 +103,7 @@ function deletelist() {
     console.log("values: " + values);
     if (classname == "ui-selectee ui-selected") {
       //check which item is selected by the user
-      // div.childNodes[i].remove();               //.remove does not work with internet explorer
+      // note : div.childNodes[i].remove() does not work with internet explorer
       div.removeChild(div.childNodes[i]); //the slected items are removed only
       i = i - 1; //since the items are removed the list is getting smaller by 1 each time so the index needs to be reduced by 1
       array.splice(array.indexOf(values), 1); //remove the deleted items from the array, it is necessary because the sortsbytask and date are using this array
@@ -86,7 +113,7 @@ function deletelist() {
 }
 
 function tip() {
-  alert("To delete more than one items use: 'CTRL+select'");
+  alert("To select more than one items use: 'CTRL+select'");
 }
 
 function showXML() {

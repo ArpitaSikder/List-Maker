@@ -1,14 +1,18 @@
 .container {
   height: auto;
-  width: 500px;
+  width: 550px;
   padding: 20px;
-  background-color: rgb(228, 224, 224);
+  background-color: rgb(29, 27, 27);
   margin: 20px;
+  border-radius: 5%;
+  font-size: larger;
+  color: white;
 }
 .back {
   display: flex;
   justify-content: center;
-  background-color: rgb(28, 28, 102);
+  /* background-color: rgb(6, 6, 77);*/
+  background-color: rgb(165, 158, 158);
 }
 .test-container {
   padding-top: 10px;
@@ -16,6 +20,8 @@
 
 .title {
   font-weight: bold;
+  font-size: xx-large;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 .name-pair {
@@ -48,6 +54,7 @@ span {
 
 #btn {
   border-radius: 4px;
+  font-size: medium;
 }
 
 #select .ui-selecting {
