@@ -9,7 +9,7 @@ body {
 }
 .container {
   height: auto;
-  width: 35%;
+  width: 550px;
   padding: 20px;
   background-color: rgb(29, 27, 27);
   margin: 20px;
@@ -31,7 +31,7 @@ body {
 .name-pair {
   display: flex;
 }
- 
+
 #insert {
   width: 350px;
 }
