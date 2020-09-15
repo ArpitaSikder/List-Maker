@@ -1,3 +1,12 @@
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(165, 158, 158);
+  display: flex;
+  justify-content: center;
+}
 .container {
   height: auto;
   width: 550px;
@@ -8,11 +17,7 @@
   font-size: larger;
   color: white;
 }
-.back {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(165, 158, 158);
-}
+
 .test-container {
   padding-top: 10px;
 }
