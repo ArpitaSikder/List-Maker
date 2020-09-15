@@ -7,15 +7,21 @@ body {
   display: flex;
   justify-content: center;
 }
+
 .container {
   height: auto;
   width: 550px;
   padding: 20px;
   background-color: rgb(29, 27, 27);
-  margin: 20px;
   border-radius: 5%;
   font-size: larger;
   color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 400px;
+  }
 }
 
 .test-container {
