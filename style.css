@@ -50,6 +50,9 @@ body {
   width: 350px;
 }
 
+#month {
+  width: 100px;
+}
 .name-pair-list {
   display: flex;
 }
