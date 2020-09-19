@@ -7,11 +7,8 @@ function appendText() {
   $(document).ready(function () {
     if (txt1.indexOf("=") != -1) {
       //checks if the format is right [note: didnot use .includes because internet explorer do not support it]
-      //txt1 = txt1.replace(" ", ""); //replaces any spaces from userinput
       array.push(txt1); //collects the items in an array for using it in the sortbytask/sortbydate functions
-
       console.log(array); //It was added for debugging
-
       $("#select").append("<li>" + txt1 + "</li>"); //adds the items
     } else {
       alert(
@@ -33,7 +30,6 @@ function sortbytask() {
       array.push(div.childNodes[i].textContent);
     }
   }
-  console.log("HEEEE");
   console.log(array);
   //sorts by task which is the first part of the pair
 
@@ -72,14 +68,11 @@ function sortbydate() {
   var array_init = new Array();
   var hashtable = {};
   var div = document.getElementById("select");
-
-  // console.log(div.childNodes[0].textContent);
   for (i = 0; i < div.childNodes.length; i++) {
     if (div.childNodes[i].value != null) {
       array.push(div.childNodes[i].textContent);
     }
   }
-  console.log("HBBBBB");
   console.log(array);
   for (var s in array) {
     var value = array[s].substr(0, array[s].indexOf("="));
@@ -140,7 +133,6 @@ function edit() {
 
 function deletelist() {
   //to slect more than one item do Ctrl+select
-
   var i;
   var div = document.getElementById("select"); //get the objects
   for (i = 0; i < div.childNodes.length; i++) {
@@ -151,7 +143,6 @@ function deletelist() {
       // note : div.childNodes[i].remove() does not work with internet explorer
       div.removeChild(div.childNodes[i]); //the slected items are removed only
       //i = i - 1; //since the items are removed the list is getting smaller by 1 each time so the index needs to be reduced by 1
-      //remove the deleted items from the array, it is necessary because the sortsbytask and date are using this array
     }
   }
 }
