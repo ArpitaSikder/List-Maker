@@ -65,8 +65,10 @@ span {
   height: 50vh;
   width: 350px;
   border: 1px solid;
+  border-radius: 10px;
+  box-shadow: 10px 10px rgb(211, 138, 138);
   word-wrap: break-word;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .options {
